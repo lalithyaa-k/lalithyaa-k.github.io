@@ -1,77 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
 
-.project-card a{
-  color:#915EFF;
-  text-decoration:none;
+.year{
+    min-width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#9d4edd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:600;
+    position:relative;
 }
 
-.timeline-item{
-  display:flex;
-  align-items:flex-start;
-  gap:25px;
-  margin-bottom:40px;
+.year::after{
+    content:'';
+    position:absolute;
+    width:3px;
+    height:120px;
+    background:#9d4edd;
+    top:90px;
 }
 
-.circle{
-  min-width:80px;
-  height:80px;
-  border-radius:50%;
-  background:#915EFF;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-weight:700;
+.timeline-item:last-child .year::after{
+    display:none;
 }
 
 .timeline-content{
-  background:#111827;
-  padding:25px;
-  border-radius:20px;
-  width:100%;
+    width:100%;
+    background:#0c0c16;
+    border:1px solid #2f184b;
+    border-radius:18px;
+    padding:30px;
+}
+
+.timeline-content h4{
+    color:#9d4edd;
+    margin-top:8px;
+    margin-bottom:20px;
+    font-size:14px;
+    font-weight:500;
 }
 
 .timeline-content p{
-  margin-top:10px;
-  color:#b5b5b5;
-  line-height:1.8;
+    color:#b3b3b3;
+    line-height:1.8;
 }
 
-.contact p{
-  color:#b5b5b5;
-}
+@media(max-width:900px){
 
-.links{
-  display:flex;
-  gap:20px;
-  margin-top:20px;
-}
+    .about{
+        flex-direction:column;
+        text-align:center;
+    }
 
-.links a{
-  color:#915EFF;
-  text-decoration:none;
-}
+    .about-left,
+    .about-right{
+        width:100%;
+    }
 
-@media(max-width:768px){
+    .about-left p{
+        max-width:100%;
+    }
 
-  nav{
-    flex-direction:column;
-    gap:20px;
-  }
+    .cards{
+        justify-content:center;
+    }
 
-  .hero{
-    flex-direction:column;
-    text-align:center;
-  }
+    .timeline-item{
+        flex-direction:column;
+    }
 
-  .hero-text h1{
-    font-size:2.8rem;
-  }
-
-  .about{
-    flex-direction:column;
-  }
-
-  .timeline-item{
-    flex-direction:column;
-  }
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
 }
